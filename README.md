@@ -1,81 +1,87 @@
-# Networkwalks-Week-2-Intern-Reconnaissance-and-Scanning
-# PENETRATION TESTING REPORT
-### Footprinting & Network Scanning Phases
+Week 2: Reconnaissance and Network Scanning
 
-A brief report on authorized web reconnaissance of `networkwalks.com` and host discovery on my local network, completed during my Networkwalks internship.
+A report on authorized reconnaissance of `networkwalks.com` and host discovery on my local network, completed during my Networkwalks internship.
 
-> All activity was limited to systems I own or had permission to assess. No exploitation or vulnerability validation was performed.
+> All activities were performed within an authorized scope. No exploitation or vulnerability validation was performed.
 
-## Activities and findings
+## Website reconnaissance
 
-### Website footprinting
+I used WHOIS, WhatWeb, `nslookup`, `curl -I`, Wafw00f, DNSRecon and Maltego to review publicly available domain, DNS, web technology and certificate information.
 
-Using WHOIS, WhatWeb, `nslookup`, `curl -I`, Wafw00f and DNSRecon, I reviewed registration, web technology, DNS, HTTP header and WAF information. The results included:
+Findings recorded during the exercise:
 
-- WordPress 7.0.4 and WP Download Manager 3.3.58 identified by WhatWeb.
-- `networkwalks.com` resolved to `192.232.216.135` during the exercise.
-- HTTP headers exposed the `/wp-json/` endpoint.
+- WhatWeb identified WordPress 7.0.4 and WP Download Manager 3.3.58.
+- `networkwalks.com` resolved to `192.232.216.135` at the time of the scan.
+- The HTTP response exposed the `/wp-json/` endpoint.
 - Wafw00f identified ModSecurity (SpiderLabs).
 - DNSRecon returned name server, mail, TXT/SPF and service record information.
+- Maltego displayed SSL certificate-related information. This does not establish that a private key was exposed.
 
-These are observations from the exercise, not confirmed vulnerabilities. Software versions and DNS or HTTP details alone do not establish that a system is vulnerable.
+These are observations, not confirmed vulnerabilities. Software versions, DNS records and HTTP details alone do not show that a system is vulnerable.
 
-### Local network discovery
+## Local network discovery
 
 I used Windows `ipconfig` to identify my local subnet, then ran a Zenmap Ping Scan and reviewed its Topology view. Two live hosts were observed:
 
 - `10.**.***.35`
 - `10.**.***.194`
 
-The addresses are partially masked.
-The topology was saved as a PDF for the practical exercise:
+![Zenmap local network topology](https://github.com/user-attachments/assets/83a0dda2-09ee-4c4c-864c-bec398a3160b)
 
-<img width="538" height="555" alt="3" src="https://github.com/user-attachments/assets/83a0dda2-09ee-4c4c-864c-bec398a3160b" />
+The host addresses are partially masked. The topology was saved as a PDF for the practical exercise.
 
+## Additional GHDB exercise
 
-## Risk and recommendations
+As a separate exercise, I reviewed Google Hacking Database (GHDB) search examples, including searches related to live cameras and PDF files. These are search techniques, not exploits. Any testing must remain within an authorized scope and respect privacy.
 
-Public technology and DNS details can help inform further reconnaissance; unexpected live hosts may warrant review. These findings indicate exposure or visibility, not confirmed weaknesses.
+## Recommendations
 
-- Keep CMS platforms and plugins current.
-- Review exposed HTTP details and DNS records periodically.
+- Keep the CMS and plugins updated.
+- Review public HTTP details and DNS records periodically.
 - Maintain and monitor WAF configuration.
-- Scan internal networks periodically; verify unexpected devices and update network documentation.
-- Test only within an authorized scope.
+- Scan internal networks periodically, investigate unexpected devices and keep network documentation current.
+- Perform reconnaissance and scanning only with authorization.
 
 ## Tools
 
-Kali Linux: WHOIS, WhatWeb, `nslookup`, `curl`, Wafw00f and DNSRecon. Windows: `ipconfig` and Zenmap (Nmap GUI).
+**Kali Linux:** WHOIS, WhatWeb, `nslookup`, `curl`, Wafw00f, DNSRecon, Maltego and the GHDB exercise.  
+**Windows:** `ipconfig` and Zenmap (Nmap GUI).
 
+## Evidence
 
-# 8. Evidences Collected
-<img width="637" height="552" alt="whois networkwalks com1_2" src="https://github.com/user-attachments/assets/d6b51de2-3912-438b-aa06-4cc990ff099f" />
+### WHOIS
 
-<img width="647" height="907" alt="whois networkwanks com 2_2" src="https://github.com/user-attachments/assets/28e35b59-3018-4ce7-8abb-04f39369be45" />
+![WHOIS results for networkwalks.com](https://github.com/user-attachments/assets/d6b51de2-3912-438b-aa06-4cc990ff099f)
 
-<img width="642" height="476" alt="whatweb networkwalks com_screenshot" src="https://github.com/user-attachments/assets/b09d800d-663e-4471-b1c4-adf9db0d05d0" />
+![WHOIS results, second screenshot](https://github.com/user-attachments/assets/28e35b59-3018-4ce7-8abb-04f39369be45)
 
-<img width="640" height="276" alt="nslookup networkwalks com_screenshot" src="https://github.com/user-attachments/assets/50a31468-8f71-4881-92c2-781d11d58b54" />
+### Website and DNS reconnaissance
 
-<img width="644" height="454" alt="curl -I" src="https://github.com/user-attachments/assets/f3a5adf1-a7f1-4afc-9372-7c703a7a69f4" />
+![WhatWeb results](https://github.com/user-attachments/assets/b09d800d-663e-4471-b1c4-adf9db0d05d0)
 
-<img width="645" height="500" alt="wafw00f networkwalks com_screenshot" src="https://github.com/user-attachments/assets/6115ae8c-0999-4c5b-9862-78615f965832" />
+![nslookup results](https://github.com/user-attachments/assets/50a31468-8f71-4881-92c2-781d11d58b54)
 
-<img width="648" height="854" alt="dnsrecon -d networkwalks com_screenshot" src="https://github.com/user-attachments/assets/36a980ef-e621-4f63-9570-dbe9a81f2576" />
+![curl response headers](https://github.com/user-attachments/assets/f3a5adf1-a7f1-4afc-9372-7c703a7a69f4)
 
-<img width="644" height="657" alt="theHarvester -d microsoft com -l 1000 -b baidu_screenshot" src="https://github.com/user-attachments/assets/f1e7005c-87bd-4b70-8020-451bf5f0a815" />
+![Wafw00f results](https://github.com/user-attachments/assets/6115ae8c-0999-4c5b-9862-78615f965832)
 
+![DNSRecon results](https://github.com/user-attachments/assets/36a980ef-e621-4f63-9570-dbe9a81f2576)
 
+### Other exercise evidence
 
-# 9.Aditional task: FOOTPRINTING & RECONNAISSANCE ATTACKS WITH GHDB
+TheHarvester screenshot from a separate Microsoft.com exercise:
 
-GHDB Exploit-DB_live cam
+![TheHarvester results for microsoft.com](https://github.com/user-attachments/assets/f1e7005c-87bd-4b70-8020-451bf5f0a815)
 
-<img width="796" height="522" alt="1" src="https://github.com/user-attachments/assets/d0423fb3-eb36-4ef7-bdb6-89c1d5c36cb1" />
+![Maltego graph](https://github.com/user-attachments/assets/c520cb48-c4e0-4623-81c9-e72d06e82ce7)
 
-GHDB Exploit-DB_math_pdf
+GHDB search example: live cameras:
 
-<img width="700" height="793" alt="2" src="https://github.com/user-attachments/assets/4e70b22b-d7a2-494b-a0e8-58dacd0a933a" />
+![GHDB live camera search example](https://github.com/user-attachments/assets/d0423fb3-eb36-4ef7-bdb6-89c1d5c36cb1)
+
+GHDB search example: PDF files:
+
+![GHDB PDF search example](https://github.com/user-attachments/assets/4e70b22b-d7a2-494b-a0e8-58dacd0a933a)
 
 
 
