@@ -53,7 +53,8 @@ Kali Linux: WHOIS, WhatWeb, `nslookup`, `curl`, Wafw00f and DNSRecon. Windows: `
 <img width="645" height="500" alt="wafw00f networkwalks com_screenshot" src="https://github.com/user-attachments/assets/6115ae8c-0999-4c5b-9862-78615f965832" />
 <img width="648" height="854" alt="dnsrecon -d networkwalks com_screenshot" src="https://github.com/user-attachments/assets/36a980ef-e621-4f63-9570-dbe9a81f2576" />
 <img width="644" height="657" alt="theHarvester -d microsoft com -l 1000 -b baidu_screenshot" src="https://github.com/user-attachments/assets/f1e7005c-87bd-4b70-8020-451bf5f0a815" />
-[zenmap_local hosts scan_topology.pdf](https://github.com/user-attachments/files/34690742/zenmap_local.hosts.scan_topology.pdf)
+[zenmap_local hosts scan_topology.pdf](https://github.com/user-attachments/files/34691181/zenmap_local.hosts.scan_topology.pdf)
+
 
 
 # 9.Aditional task: FOOTPRINTING & RECONNAISSANCE ATTACKS WITH GHDB
