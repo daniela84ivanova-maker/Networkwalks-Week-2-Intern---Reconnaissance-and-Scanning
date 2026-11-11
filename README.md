@@ -27,7 +27,7 @@ I used Windows `ipconfig` to identify my local subnet, then ran a Zenmap Ping Sc
 - `10.**.***.35`
 - `10.**.***.194`
 
-The addresses are partially masked. The topology was saved as a PDF for the practical exercise.
+The addresses are partially masked. The topology was saved as a PDF for the practical exercise: [View the Zenmap topology](reports/zenmap-local-hosts-scan-topology.pdf).
 
 ## Risk and recommendations
 
