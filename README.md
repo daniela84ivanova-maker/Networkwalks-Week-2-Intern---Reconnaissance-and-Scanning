@@ -53,15 +53,75 @@ Kali Linux: WHOIS, WhatWeb, `nslookup`, `curl`, Wafw00f and DNSRecon. Windows: `
 <img width="645" height="500" alt="wafw00f networkwalks com_screenshot" src="https://github.com/user-attachments/assets/6115ae8c-0999-4c5b-9862-78615f965832" />
 <img width="648" height="854" alt="dnsrecon -d networkwalks com_screenshot" src="https://github.com/user-attachments/assets/36a980ef-e621-4f63-9570-dbe9a81f2576" />
 <img width="644" height="657" alt="theHarvester -d microsoft com -l 1000 -b baidu_screenshot" src="https://github.com/user-attachments/assets/f1e7005c-87bd-4b70-8020-451bf5f0a815" />
-[zenmap_local hosts scan_topology.pdf](https://github.com/user-attachments/files/34691181/zenmap_local.hosts.scan_topology.pdf)
+
+[zenmap_local hosts scan_topology.pdf](https://github.com/user-attachments/files/34691209/zenmap_local.hosts.scan_topology.pdf)
+
 
 
 
 # 9.Aditional task: FOOTPRINTING & RECONNAISSANCE ATTACKS WITH GHDB
 
-[GHDB Exploit-DB_live cams.docx](https://github.com/user-attachments/files/34691030/GHDB.Exploit-DB_live.cams.docx)
+GHDB Exploit-DB_live cam
+No.	Link	Relevant Dork	Username / Password
+(if any)
+1	http://109.233.191.130:8080/
+inurl:/ViewerFrame? intitle:"Network Camera NetworkCamera"	-
+2	http://109.206.96.75:8080/ 
+inurl:mobile.html intitle:webcamXP	-
+3	http://www.insecam.org/en/view/414256/ 
+inurl:mobile.html intitle:webcamXP	-
+4	http://68.115.218.130:32479/multi.html 
+inurl:/multi.html intitle:webcam	-
+5	http://72.199.200.5:8080/ 
+intitle:"webcamxp" "Flash JPEG Stream"	-
+6	http://phildorian.hopto.org:8080/ 
+intitle:"webcamxp" "Flash JPEG Stream"	-
+7	http://myfishcam.homedns.org:444/ 
+intitle:"webcamxp" "Flash JPEG Stream"	-
+8	http://193.77.49.122/ 
+inurl:"view.shtml" "Network Camera"	-
+9	http://www.insecam.org/en/view/1010229/ 
+inurl:"live/cam.html"	-
+10	http://173.69.185.179:9001/cgi-bin/guestimage.html 
+inurl:"live/cam.html" 	-
 
-[GHDB Exploit-DB_math_pdf.docx](https://github.com/user-attachments/files/34691084/GHDB.Exploit-DB_math_pdf.docx)
+
+GHDB Exploit-DB_math_pdf
+
+No.	Link	Relevant Dork	Username / Password
+(if any)
+1	http://erewhon.superkuh.com/library/Math/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+2	https://ochicken.net/library/Mathematics/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+3	https://netlib.org/math/docpdf/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+4	https://jasoncantarella.com/downloads/?C=N;O=D 
+intitle:index.of "parent
+directory" mathematics pdf	-
+5	https://math.ucr.edu/home/baez/mathematical/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+6	https://www.jsoftware.com/books/pdf/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+7	http://inis.jinr.ru/sl/vol2/Mathematics/Math.Encyclopedia/Pdf/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+8	https://www.math.ias.edu/~goresky/pdf/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+9	https://www.maher.org.uk/~math/teaching/2023/spring/tda/notes/ 
+intitle:index.of "parent
+directory" mathematics pdf	-
+10	https://k4m.uk/beal/files/After%20School/?MD 
+intitle:index.of "parent
+directory" mathematics pdf	-
+
+
 
 
 
